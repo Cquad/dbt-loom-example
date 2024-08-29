@@ -1,4 +1,8 @@
 manifests:
+  - name: core
+    type: file
+    config:
+      path: ../core/target/manifest.json  
   - name: finance
     type: file
     config:

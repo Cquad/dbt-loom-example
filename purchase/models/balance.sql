@@ -1,5 +1,5 @@
 SELECT
     order_date,
-    revenue - purchase as balance
+    SUM(amount_excl_vat - purchase) as balance
 FROM {{ ref('stg_balance') }}
 GROUP BY order_date

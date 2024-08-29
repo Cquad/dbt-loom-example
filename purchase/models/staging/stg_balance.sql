@@ -1,8 +1,8 @@
 WITH revenue AS (
     SELECT *
-    FROM {{ ref('finance', 'revenue') }}
+    FROM {{ ref('core', 'orders') }}
 )
 
 SELECT *
-FROM orders
+FROM revenue
 LEFT JOIN {{ ref('purchase') }} ON 1 = 1
